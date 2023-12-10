@@ -1,0 +1,12 @@
+./datasets/Food101/*
+./datasets/mmimdb/*
+./datasets/Hatefull_Memes/*
+./datasets/missing_tables/*
+
+./model/*
+
+./result/*
+
+./logs/*
+
+./unidiffuser_feature/*
