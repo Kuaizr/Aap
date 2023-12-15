@@ -110,6 +110,8 @@ def config():
     num_workers = 8
     precision = 16
 
+    add_type = "both"  # none, generation , retrieval, both
+
 
 # Named configs for "environment" which define gpus and nodes, and paths
 @ex.named_config

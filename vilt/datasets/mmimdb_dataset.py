@@ -87,8 +87,10 @@ class MMIMDBDataset(BaseDataset):
             for idx in range(len(image_tensor)):
                 image_tensor[idx] = torch.ones(image_tensor[idx].size()).float()
             
-            # image_tensor = all_gen_image_tensor
-            # image_tensor = all_jiansuo_image_tensor
+            if self.missing_info['add_type'] == 'generation':
+                image_tensor = all_gen_image_tensor
+            elif self.missing_info['add_type'] == 'retrieval':
+                image_tensor = all_jiansuo_image_tensor
 
 
         gen_text = self.get_text(index)["gen_text"]
@@ -105,8 +107,10 @@ class MMIMDBDataset(BaseDataset):
                 return_special_tokens_mask=True,
             )   
             text = (text, encoding)
-            # text = jiansuo_text
-            # text = gen_text
+            if self.missing_info['add_type'] == 'generation':
+                text = gen_text
+            elif self.missing_info['add_type'] == 'retrieval':
+                text = jiansuo_text
         else:
             text = self.get_text(index)["text"]
         

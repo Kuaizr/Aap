@@ -51,8 +51,7 @@ def main(_config):
     max_steps = _config["max_steps"] if _config["max_steps"] is not None else None
 
     trainer = pl.Trainer(
-        gpus=[0],
-        # gpus=_config["num_gpus"],
+        gpus=_config["num_gpus"],
         num_nodes=_config["num_nodes"],
         precision=_config["precision"],
         accelerator="ddp",

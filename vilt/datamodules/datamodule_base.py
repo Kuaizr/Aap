@@ -43,7 +43,8 @@ class BaseDataModule(LightningDataModule):
             'type' : _config["missing_type"],
             'both_ratio' : _config["both_ratio"],
             'missing_table_root': _config["missing_table_root"],
-            'simulate_missing' : _config["simulate_missing"]
+            'simulate_missing' : _config["simulate_missing"],
+            'add_type' : _config["add_type"],
         }
         # for bash execution
         if _config["test_ratio"] is not None:

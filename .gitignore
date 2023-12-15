@@ -9,4 +9,4 @@
 
 ./logs/*
 
-./unidiffuser_feature/*
+./data_augmentation/generation/unidiffuser/models/*
