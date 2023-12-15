@@ -79,4 +79,4 @@ python run.py with data_root=<ARROW_ROOT> \
 ## Acknowledgements
 
 This code is based on [ViLT](https://github.com/dandelin/ViLT.git) and [Missing-aware-prompts](https://github.com/YiLunLee/missing_aware_prompts).
-The code for the data enhancement part comes from CLIP and [Unidiffuser](https://github.com/thu-ml/unidiffuser)
+The code for the data augmentation part comes from CLIP and [Unidiffuser](https://github.com/thu-ml/unidiffuser)
